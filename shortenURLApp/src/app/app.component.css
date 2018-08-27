@@ -1,0 +1,12 @@
+
+.header{
+    color: white;
+    background-color:#4675ca;
+    padding: 2%;
+}
+
+.body-container{
+    /* background-color:#4675ca; */
+    min-height: 100%;
+}
+

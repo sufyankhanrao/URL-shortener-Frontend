@@ -1,0 +1,19 @@
+<div class="row url-getter my-containers shadow-sm pt-2">
+    <div class="col-12 pl-5">
+      <h4 style="color:#4675ca;">Simplify your links</h4>
+    </div>
+    <span></span>
+    <div class="col-6 mt-2 pl-5 pt-2">
+      <input type="url" class="form-control shadow p-3 col-12 mb-5 rounded" placeholder="Your Original URL here" #URL />
+    </div>
+    <div class="col-2 mt-2 pt-2">
+      <button type="button" (click)="generateShortenURL(URL.value)" data-toggle="tooltip" data-placement="top" class="shorten-url-btn btn btn-secondary shadow-lg rounded" title="Click to Get a Shorten URL">SHORTEN URL</button>
+    </div>
+    <div class="col-4 mt-2 pt-2" >
+    </div>
+    <div class="col-12 ml-5">
+        <p *ngIf="url_validity" style="color: red" [@FadeAnimation]><strong>Error : </strong>Invalid URL!</p>
+        <p *ngIf="db_updated" style="color: green" [@FadeAnimation]><strong>Success : </strong>URL Added</p>
+        <p *ngIf="db_already_exist" style="color: green" [@FadeAnimation]><strong>Info : </strong>URL Already Exist!</p>
+    </div>
+  </div>

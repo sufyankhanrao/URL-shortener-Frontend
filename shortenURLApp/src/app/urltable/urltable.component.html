@@ -1,0 +1,26 @@
+<div class="row ml-5 mr-5 mt-5" *ngIf="viewFlag">
+  <div class="container my-containers shadow p-3 col-12 mb-5 rounded table-responsive ">
+    <table class="table table-hover table-light table-bordered">
+      <thead class="table-head">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Original URL</th>
+          <th scope="col">Created ON</th>
+          <th scope="col">Short URL</th>
+          <th scope="col">All Clicks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let url of urls;let myIndex=index;" [@flyInOut]>
+          <td>{{myIndex+1}}</td>
+          <td>{{url.longURL}}</td>
+          <td>{{url.startingDate | miliTOdate}}</td>
+          <td>
+            <a routerLink="/dashboard/{{url.id}}">{{url.shortURL}}</a>
+          </td>
+          <td>{{url.urlStatList.length}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

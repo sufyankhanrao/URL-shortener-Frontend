@@ -1,0 +1,48 @@
+<div class="row url-getter my-containers shadow-sm p-3 mb-5">
+  <div class="col-10 pl-5 float-left">
+    <p style="color:#4675ca;font-size: 20px;">
+      Analytics Data for
+      <a style="color: black" href="{{redirectTo}}" target="blank" (click)="refresh()">{{shortURL}}</a>
+    </p>
+    <p style="color:#4675ca;font-size: 15px;">
+      Created on :
+      <em style="color:#000000;">{{date | miliTOdate}}</em>
+    </p>
+    <p style="color:#4675ca;font-size: 15px;">
+      Original URL :
+      <a style="color:#000000;" href="{{longURL}}" target="_blank">{{longURL}}
+        <i class="fa fa-external-link" style="color:green;"></i>
+      </a>
+    </p>
+  </div>
+  <div>
+    <a routerLink="/" class="back-btn btn btn-secondary btn-sm shadow-lg rounded">BACK</a>
+  </div>
+</div>
+
+<div class="row ml-5 mr-5">
+  <div class="container my-containers shadow p-3 col-12 mb-5 rounded table-responsive">
+    <div class="row ml-5">
+      <div class="col-2 card text-white mb-3 total-click-div shadow-lg rounded">
+        <h6>TotalClicks</h6>
+        <div class="card-body">
+          <p [(ngModel)]="totalClicks">{{totalClicks}}</p>
+        </div>
+      </div>
+      <div class="col-10"></div>
+    </div>
+    <div class="row ml-1">
+      <div class="col-12">
+        <canvas id="lineChart">{{myLineChart}}</canvas>
+      </div>
+    </div>
+    <div class="inline-chart row ml-1 mt-5">
+      <div class="col-6">
+        <canvas id="piChart">{{myPiChart}}</canvas>
+      </div>
+      <div class="col-6">
+        <canvas id="barChart">{{myBarChart}}</canvas>
+      </div>
+    </div>
+  </div>
+</div>

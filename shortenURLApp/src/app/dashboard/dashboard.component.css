@@ -1,0 +1,14 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+.my-containers{
+    background-color: #0000001c;
+}
+.total-click-div{
+    background-color: #4675ca;
+    font-weight: bold;
+}
+.back-btn{
+    background-color: #4675ca;
+    min-width: 200px;
+    margin-top: 50%;
+    font-weight: bold;
+}
